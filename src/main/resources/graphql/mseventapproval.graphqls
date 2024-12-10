@@ -1,0 +1,14 @@
+type MsEventApprovalDTO{
+    id: String
+    sourceProgram: String
+    code: String
+    name: String
+    isActive: Boolean
+    remarks: String
+    isDeleted: Boolean
+    deletedReason: String
+    createdBy: String
+    createdDate: DateTime
+    modifiedBy: String
+    modifiedDate: DateTime
+}

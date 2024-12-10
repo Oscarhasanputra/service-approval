@@ -1,0 +1,22 @@
+input RequestPagingDTO{
+    sortDirection: String = "ASC"
+    sortBy: String
+    page: Int
+    size: Int
+    where: [WhereConditionDTO]
+}
+
+input WhereConditionDTO{
+    condition: String
+    field: String
+    value: String
+    conjunction: String
+    inner: InnerCondition
+}
+
+input InnerCondition{
+    conjunction: String
+    where:[WhereConditionDTO]
+}
+
+

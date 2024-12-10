@@ -1,0 +1,12 @@
+#... Custom scalar definition
+#... untuk menambahkan custom scalar dapat dilakukan melalui konfigurasi
+#... GraphQLConfig
+
+scalar Long
+scalar DateTime
+
+type Query {
+    getConfigApproval(filter: RequestPagingDTO):[ConfigApprovalDTO]
+
+    getEventApproval(filter: RequestPagingDTO):[MsEventApprovalDTO]
+}

@@ -1,0 +1,39 @@
+type ConfigApprovalDTO{
+    id: String
+    branch: String
+    effectiveDate: DateTime
+    msEventapprovalId: String
+    msEventapprovalCode: String
+    autoSendRequest: String
+    stopWhenRejected: Boolean
+    frontendView: String
+    endpointOnFinished: String
+    remarks: String
+    isDeleted: Boolean
+    deletedReason: String
+    createdBy: String
+    createdDate: DateTime
+    modifiedBy: String
+    modifiedDate: DateTime
+    subevent : [ConfigApprovalSubeventDTO]
+}
+
+type ConfigApprovalSubeventDTO{
+    id: String
+    trxConfigapprovalId: String
+    type: String
+    code: String
+    remarks: String
+    assignee: [ConfigApprovalSubeventAssigneeDTO]
+
+}
+
+type ConfigApprovalSubeventAssigneeDTO{
+    id: String
+    trcConfigapprovalsubeventId: String
+    level: Int
+    totalApprovalNeeded: Int
+    assigneeType: String
+    assigneeId: String
+    assigneeAttribute: String
+}
