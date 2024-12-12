@@ -83,7 +83,7 @@ public class MsEventApprovalServiceImpl implements MsEventApprovalService {
                 ResultResponseDTO responseDto = new ResultResponseDTO();
                 responseDto.setId(createEventApprovalRequestDTO.getCode());
                 responseDto.setStatusDetail(ResponseStatusEnum.SUCCESS.responseMessage);
-                ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(responseCode,"EVENT APPROVAL CREATED SUCCESSFULLY");
+                ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(new BigDecimal(responseCode),"EVENT APPROVAL CREATED SUCCESSFULLY");
                 responseDto.setResponseDetail(Arrays.asList(responseDetailDTO));
                 eventApprovalResponseDTOList.add(responseDto);
                 codeEventApprovalList.add(createEventApprovalRequestDTO.getCode());
@@ -176,7 +176,7 @@ public class MsEventApprovalServiceImpl implements MsEventApprovalService {
                 ResultResponseDTO responseDto = new ResultResponseDTO();
                 responseDto.setStatusDetail(ResponseStatusEnum.SUCCESS.responseMessage);
                 responseDto.setId(request.getId());
-                ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(ResponseStatusEnum.SUCCESS.responseCode,"MASTER EVENT APPROVAL Updated Successfully");
+                ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(new BigDecimal(ResponseStatusEnum.SUCCESS.responseCode),"MASTER EVENT APPROVAL Updated Successfully");
                 responseDto.setResponseDetail(Arrays.asList(responseDetailDTO));
                 eventApprovalResponseDTOList.add(responseDto);
                 idMsEventApprovalList.add(request.getId());
@@ -271,7 +271,7 @@ public class MsEventApprovalServiceImpl implements MsEventApprovalService {
                ResultResponseDTO responseDto = new ResultResponseDTO();
                responseDto.setStatusDetail(ResponseStatusEnum.SUCCESS.responseMessage);
                responseDto.setId(request.getId());
-               ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(ResponseStatusEnum.SUCCESS.responseCode,"MASTER EVENT APPROVAL Updated Successfully");
+               ResponseDetailDTO responseDetailDTO = new ResponseDetailDTO(new BigDecimal(ResponseStatusEnum.SUCCESS.responseCode),"MASTER EVENT APPROVAL Updated Successfully");
                responseDto.setResponseDetail(Arrays.asList(responseDetailDTO));
                eventApprovalResponseDTOList.add(responseDto);
                idMsEventApprovalList.add(request.getId());
